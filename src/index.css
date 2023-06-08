@@ -1,13 +1,103 @@
-body {
-  margin: 0;
+body{
+  background: url("../public/background.jpg");
+  object-fit: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  monospace;
+}
+
+
+
+.footernav{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: hsl(0, 0%, 20%);
+  border-top: 2px solid hsl(240, 100%, 80%);
+  display: flex;
+  align-items: center;
+}
+.timeIcon{
+  padding-left: 600px;
+}
+@media screen and (max-width:800px){
+  .timeIcon{
+    padding-left: 200px;
+  }
+}
+.timeIcon div p{
+  line-height: 3px;
+  font-weight: 500;
+  color: white;
+}
+.appbar{
+  width: 100vw;
+  height: 100vh;
+}
+.app{
+  background: hsl(0, 0%, 60%);
+width: 400px;
+height: 550px;
+margin-top: 34px;
+border-radius: 12px;
+position: relative;
+}
+
+.fadeOutApp{
+  transition: 1s ease-out;
+  transform: translateX(-100vw);
+}
+.fadeInApp{
+  transform: translateX(0vw);
+  transition: 1s ease-in;
+}
+.applogo{
+  position: absolute;
+  bottom: 36px;
+  left: 6px;
+
+}
+.closenav{
+  position: absolute;
+  right: 0;
+top: 0;
+margin: 0;
+padding: 0;
+}
+.quickAccess{
+  margin: 16px;
+  font-weight: 700;
+}
+.closenav :hover{
+background-color: hsl(0, 100%, 30%);
+
+}
+.adminOverlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.048);
+  position: fixed;
+  left: 0;
+}
+.adminCont{
+  margin: auto;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #979393, #b4aeae);
+  box-shadow:  9px 9px 18px #7c7979,
+               -9px -9px 18px #d4cdcd;
+     height: 500px;
+     width: 75%;    
+     position: relative;      
 }
