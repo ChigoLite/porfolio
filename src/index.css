@@ -1,23 +1,66 @@
 body{
-  background: url("../public/background.jpg");
-  object-fit: cover;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
     margin: 0;
     box-sizing: border-box;
     padding: 0;
-}
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
 
-code {
+ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
   monospace;
+} 
+.home{
+  
+  background: url("../public/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-
-
+  /* frontPage styte */
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  .fade{
+  transform: translateY(-100%);
+  transition: 2s ease-out;
+  
+  }
+  .fade2{
+    display: none;
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  
 .footernav{
   position: fixed;
   left: 0;
@@ -50,24 +93,34 @@ code {
   background: hsl(0, 0%, 60%);
 width: 400px;
 height: 550px;
-margin-top: 34px;
-border-radius: 12px;
-position: relative;
+left:0;
+bottom: 0;
+position: absolute;
+margin-bottom: 20px;
+
 }
 
 .fadeOutApp{
   transition: 1s ease-out;
   transform: translateX(-100vw);
+  visibility: hidden;
 }
 .fadeInApp{
   transform: translateX(0vw);
   transition: 1s ease-in;
 }
 .applogo{
+  
   position: absolute;
   bottom: 36px;
   left: 6px;
+}
+.brightness{
 
+  position: absolute;
+  bottom: 36px;
+  left: 100px;
+  width: 50%;
 }
 .closenav{
   position: absolute;
@@ -100,4 +153,38 @@ background-color: hsl(0, 100%, 30%);
      height: 500px;
      width: 75%;    
      position: relative;      
+}
+@media screen and (max-width:750px) {
+  .app{
+    background: hsl(0, 0%, 60%);
+  width: 400px;
+  height: 550px;
+  left:0;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 20px;
+  }
+}
+.folderCont{
+  width: 50%;
+  height: 100%;
+}
+.folders{
+  display: flex;
+  flex-flow: wrap;
+  gap: 10px;
+  margin: 12px;
+}
+.folders div{
+  width: 80px;
+  height: 70px;
+  border-radius: 6px;
+  background-color: #fdfafaa1;
+  overflow: hidden;
+
+}
+
+.folders h4{
+  font-size: 16px;
+  text-transform: capitalize;
 }

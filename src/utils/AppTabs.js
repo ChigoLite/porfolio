@@ -7,7 +7,7 @@ import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
-import { Stack, Button } from "@mui/material";
+import { Stack, Button, Slider } from "@mui/material";
 import PowerSettingsNewIcon from "@mui/icons-material/PowerSettingsNew";
 import { useGlobalHooks } from "./context";
 export function AccountMenu() {
@@ -16,18 +16,22 @@ export function AccountMenu() {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClose = () => {
+  const handleCloseTab = () => {
     setAnchorEl(null);
   };
   const shutDown = () => {
     window.close();
   };
-  const { handleAdmin } = useGlobalHooks();
+  const { handleAdmin, handleClose } = useGlobalHooks();
   return (
     <React.Fragment>
       <Stack spacing={2}>
         <Tooltip title="Admin">
-          <IconButton onClick={handleAdmin}>
+          <IconButton
+            onClick={() => {
+              handleClose();
+              handleAdmin();
+            }}>
             <AccountBoxIcon sx={{ fontSize: "34px" }} />
           </IconButton>
         </Tooltip>
@@ -46,35 +50,11 @@ export function AccountMenu() {
           anchorEl={anchorEl}
           id="account-menu"
           open={open}
-          onClose={handleClose}
-          onClick={handleClose}
-          PaperProps={{
-            elevation: 0,
-            sx: {
-              overflow: "visible",
-              filter: "drop-shadow(0px 2px 8px rgba(0,0,0,0.32))",
-              mt: 1.5,
-              "& .MuiAvatar-root": {
-                width: 32,
-                height: 32,
-              },
-              "&:before": {
-                content: '""',
-                display: "block",
-                position: "absolute",
-                top: 0,
-                right: 14,
-                width: 10,
-                height: 10,
-                bgcolor: "background.paper",
-                transform: "translateY(-50%) rotate(45deg)",
-                zIndex: 0,
-              },
-            },
-          }}
+          onClose={handleCloseTab}
+          onClick={handleCloseTab}
           transformOrigin={{ horizontal: "left", vertical: "top" }}
           anchorOrigin={{ horizontal: "left", vertical: "bottom" }}>
-          <MenuItem onClick={handleClose}>
+          <MenuItem onClick={handleCloseTab}>
             <Button onClick={shutDown}>Shutdown</Button>
           </MenuItem>
         </Menu>

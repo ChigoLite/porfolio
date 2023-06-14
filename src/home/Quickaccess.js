@@ -22,7 +22,7 @@ const Quickaccess = () => {
       }}>
       <nav aria-label="main mailbox folders">
         <List>
-          <ListItem disablePadding>
+          <ListItem>
             <ListItemButton>
               <ListItemIcon>
                 <FolderIcon fontSize="large" color="primary" />

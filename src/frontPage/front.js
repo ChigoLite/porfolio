@@ -1,5 +1,4 @@
-import logo from "../logo.svg";
-import "../App.css";
+import "../index.css";
 import AccountBoxIcon from "@mui/icons-material/AccountBox";
 
 function FrontPage({ display }) {
