@@ -75,6 +75,10 @@ body{
 .timeIcon{
   padding-left: 600px;
 }
+@media screen and (max-width:600px){
+  .timeIcon{
+    padding-left: 200px;
+  }}
 @media screen and (max-width:800px){
   .timeIcon{
     padding-left: 200px;
@@ -83,7 +87,7 @@ body{
 .timeIcon div p{
   line-height: 3px;
   font-weight: 500;
-  color: white;
+  color: rgb(255, 254, 254);
 }
 .appbar{
   width: 100vw;
@@ -157,7 +161,7 @@ background-color: hsl(0, 100%, 30%);
 @media screen and (max-width:750px) {
   .app{
     background: hsl(0, 0%, 60%);
-  width: 400px;
+  width: 350px;
   height: 550px;
   left:0;
   bottom: 0;

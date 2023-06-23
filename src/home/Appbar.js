@@ -5,7 +5,7 @@ import Quickaccess from "./Quickaccess";
 import CloseOutlinedIcon from "@mui/icons-material/CloseOutlined";
 import { useGlobalHooks } from "../utils/context";
 const Appbar = ({ openApp }) => {
-  const { handleClose, handleBrightnessChange, screenBrightness } =
+  const { handleClose } =
     useGlobalHooks();
 
   return (
@@ -18,25 +18,7 @@ const Appbar = ({ openApp }) => {
               <AccountMenu />
             </Stack>
           </div>
-          <div className="brightness">
-            <Box>
-              <Stack
-                spacing={2}
-                direction="row"
-                sx={{ mb: 1 }}
-                alignItems="center">
-                <Slider
-                  value={screenBrightness}
-                  onChange={handleBrightnessChange}
-                  min={0}
-                  max={100}
-                  step={1}
-                  aria-label="Screen brightness"
-                />
-              </Stack>
-            </Box>
-          </div>
-
+       
           <h4 className="quickAccess">Quick Access</h4>
 
           <Quickaccess />
