@@ -1,0 +1,226 @@
+body{
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+
+ code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  monospace;
+} 
+.home{
+  
+  background: url("../public/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+  /* frontPage styte */
+  .App {
+    text-align: center;
+  }
+  
+  .App-logo {
+    height: 40vmin;
+    pointer-events: none;
+  }
+  .fade{
+  transform: translateY(-100%);
+  transition: 2s ease-out;
+  
+  }
+  .fade2{
+    display: none;
+  }
+  .App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+  }
+  
+  .App-link {
+    color: #61dafb;
+  }
+  
+  
+.footernav{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 60px;
+  width: 100%;
+  background: hsl(0, 0%, 20%);
+  border-top: 2px solid hsl(240, 100%, 80%);
+}
+.footer-cont{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.timeIcon  p{
+  line-height: 3px;
+  font-weight: 500;
+  color: rgb(255, 254, 254);
+  width: 200px;
+}
+.appbar{
+  width: 100%;
+  height: 100vh;
+}
+.app{
+  background: hsl(0, 0%, 60%);
+width: 400px;
+height: 550px;
+left:0;
+bottom: 0;
+position: absolute;
+margin-bottom: 20px;
+
+}
+
+.fadeOutApp{
+  transition: 1s ease-out;
+  transform: translateX(-100vw);
+  visibility: hidden;
+}
+.fadeInApp{
+  transform: translateX(0vw);
+  transition: 1s ease-in;
+}
+.applogo{
+  
+  position: absolute;
+  bottom: 36px;
+  left: 6px;
+}
+.brightness{
+
+  position: absolute;
+  bottom: 36px;
+  left: 100px;
+  width: 50%;
+}
+.closenav{
+  position: absolute;
+  right: 0;
+top: 0;
+margin: 0;
+padding: 0;
+}
+.quickAccess{
+  margin: 16px;
+  font-weight: 700;
+}
+.closenav :hover{
+background-color: hsl(0, 100%, 30%);
+
+}
+.adminOverlay{
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.048);
+  position: fixed;
+  left: 0;
+}
+.hide{
+  display: none;
+}
+.adminCont{
+  margin: auto;
+  border-radius: 17px;
+  background: linear-gradient(145deg, #979393, #b4aeae);
+  box-shadow:  9px 9px 18px #7c7979,
+               -9px -9px 18px #d4cdcd;
+     height: 550px;
+     width: 85%;    
+     position: relative;      
+}
+@media screen and (max-width:750px) {
+  .app{
+    background: hsl(0, 0%, 60%);
+  width: 350px;
+  height: 550px;
+  left:0;
+  bottom: 0;
+  position: absolute;
+  margin-bottom: 20px;
+  }
+}
+.folderCont{
+  width: 80%;
+  height: 100%;
+  margin: auto;
+}
+.folders{
+  display: flex;
+  flex-flow: wrap;
+  gap: 50px;
+  margin: 12px;
+  margin-top: 120px;
+}
+.folders div{
+  width: 100px;
+  height: 90px;
+  border-radius: 6px;
+  background-color: #fdfafaa1;
+  overflow: hidden;
+
+}
+.foldertxt{
+  background: rgba(36, 36, 216, 0.411);
+  color: rgb(201, 195, 195);
+  font-size: 12px;
+  text-transform: capitalize;
+  padding: 6px;
+}
+.foldertxt span {
+  text-transform: uppercase;
+  font-size: 32px;
+  color: rgb(179, 96, 179);
+  font-weight: 600;
+}
+@media screen and (max-width:600px) {
+  .folders div{
+    width: 90px;
+    height: 70px;
+    border-radius: 6px;
+    background-color: #fdfafaa1;
+    overflow: hidden;
+  
+  }
+  .folders{
+    
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-content: center;
+    
+    gap: 20px;
+    margin: 12px;
+    margin-top: 140px;
+  }
+}
+.folders h4{
+  font-size: 16px;
+  text-transform: capitalize;
+}
