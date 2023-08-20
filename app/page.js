@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import React, { useEffect, useState } from "react";
 import FrontPage from "@/Components/frontpage/front";
@@ -9,7 +9,7 @@ function Home() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setDisplay(false);
-    }, 2000);
+    }, 1000);
 
     return () => {
       clearTimeout(timer);
@@ -20,7 +20,7 @@ function Home() {
     <>
       <div className="home">
         <FrontPage display={display} />
-<Main/>
+        <Main />
       </div>
     </>
   );

@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
 import React, { useState, useEffect } from "react";
-import {FaAppStore} from "react-icons/fa";
-import { IconButton} from "@mui/material";
+import { FaAppStore } from "react-icons/fa";
+import { IconButton } from "@mui/material";
 import { useGlobalHooks } from "@/Components/context";
 import Appbar from "./Appbar";
 
@@ -10,8 +10,7 @@ import Appbar from "./Appbar";
 
 const Main = () => {
   const [date, setDate] = useState(new Date());
-  const { showAdmin, openApp, handleClose,  
-     } = useGlobalHooks();
+  const { showAdmin, openApp, handleClose } = useGlobalHooks();
   useEffect(() => {
     const timer = setInterval(() => {
       setDate(new Date());
@@ -26,27 +25,23 @@ const Main = () => {
   const currentTime = date.toLocaleTimeString();
   return (
     <div className="homepage">
-      
       {/* <Folder /> */}
 
-      <Appbar/>
+      <Appbar />
 
       <main className="footernav">
         <div className="footer-cont">
+          <div>
+            <IconButton onClick={handleClose}>
+              <FaAppStore style={{ fontSize: "44px", color: "white" }} />
+            </IconButton>
+          </div>
 
-        <div>
-          <IconButton onClick={handleClose}>
-            <FaAppStore
-              style={{ fontSize: "44px", color: "white" }}
-            />
-          </IconButton>
-        </div>
-
-        <div className="timeIcon">
-            <p>{currentTime}</p>
+          <div className="timeIcon">
+            <p suppressHydrationWarning={true}>{currentTime}</p>
             <p>{currentDate}</p>
+          </div>
         </div>
-              </div>
       </main>
     </div>
   );
