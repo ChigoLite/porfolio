@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import * as React from "react";
 import Box from "@mui/material/Box";
@@ -8,9 +8,10 @@ import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
-import {FaUserCog,FaPowerOff} from 'react-icons/fa'
+import { FaUserCog, FaPowerOff } from "react-icons/fa";
 import { Stack, Button, Slider } from "@mui/material";
 import { useGlobalHooks } from "@/Components/context";
+import Link from "next/link";
 
 export function AccountMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -29,13 +30,16 @@ export function AccountMenu() {
     <React.Fragment>
       <Stack spacing={2}>
         <Tooltip title="Admin">
-          <IconButton
-            onClick={() => {
-              handleClose();
-              handleAdmin();
-            }}>
-            <FaUserCog style={{ fontSize: "34px" }} />
-          </IconButton>
+          <Link href="/about">
+            <IconButton
+              onClick={() => {
+                handleClose();
+                handleAdmin();
+              }}
+            >
+              <FaUserCog style={{ fontSize: "34px" }} />
+            </IconButton>
+          </Link>
         </Tooltip>
         <Divider />
         <Tooltip title="shutdown">
@@ -44,7 +48,8 @@ export function AccountMenu() {
             size="small"
             aria-controls={open ? "account-menu" : undefined}
             aria-haspopup="true"
-            aria-expanded={open ? "true" : undefined}>
+            aria-expanded={open ? "true" : undefined}
+          >
             <FaPowerOff style={{ fontSize: "34px" }} />
           </IconButton>
         </Tooltip>
@@ -55,7 +60,8 @@ export function AccountMenu() {
           onClose={handleCloseTab}
           onClick={handleCloseTab}
           transformOrigin={{ horizontal: "left", vertical: "top" }}
-          anchorOrigin={{ horizontal: "left", vertical: "bottom" }}>
+          anchorOrigin={{ horizontal: "left", vertical: "bottom" }}
+        >
           <MenuItem onClick={handleCloseTab}>
             <Button onClick={shutDown}>Shutdown</Button>
           </MenuItem>

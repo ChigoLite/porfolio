@@ -1,37 +1,41 @@
-"use client"
+"use client";
 
 import React, { useContext, useState, useEffect } from "react";
-
 
 const Appcontext = React.createContext();
 const Context = ({ children }) => {
   const [showAdmin, setShowAdmin] = useState(false);
-  const [showProjects, setShowProjects] = useState(false);
   const [openApp, setOpenApp] = useState(false);
- const [about, setAbout] = useState(false)
-const[edu, setEdu]=useState(false)
-
+  const [developer, setDeveloper] = useState(false);
+  const [education, setEducation] = useState(false);
+  const [projects, setProjects] = useState(false);
+  const [open, setOpen] = useState(false);
+  const handleOpenProject = () => {
+    setProjects(true);
+    setOpen(true);
+  };
+  const handleOpenDeveloper = () => {
+    setDeveloper(true);
+    setOpen(true);
+  };
+  const handleOpenEducation = () => {
+    setEducation(true);
+    setOpen(true);
+  };
+  const handleOpenAbout = () => setOpen(true);
+  const handleCloseModal = () => {
+    setOpen(false);
+    setDeveloper(false);
+    setEducation(false);
+    setProjects(false);
+  };
   const handleAdmin = () => {
     setShowAdmin(!showAdmin);
   };
   const handleClose = () => {
     setOpenApp(!openApp);
   };
-  
-  const ProjectTab = () => {
-    setShowProjects(!showProjects)
-  };
-  
-  const AboutTab = () => {
-    setShowProjects(!showProjects)
-  };
-  
-  const EduTab=()=>{
-    setEdu(!edu)
-  }
 
-    
-  
   return (
     <Appcontext.Provider
       value={{
@@ -39,12 +43,17 @@ const[edu, setEdu]=useState(false)
         showAdmin,
         openApp,
         handleClose,
-        showProjects,
-        ProjectTab,
-        AboutTab,
-        about,
-        edu,EduTab
-      }}>
+        developer,
+        education,
+        handleCloseModal,
+        open,
+        handleOpenAbout,
+        handleOpenProject,
+        handleOpenDeveloper,
+        handleOpenEducation,
+        projects,
+      }}
+    >
       {children}
     </Appcontext.Provider>
   );

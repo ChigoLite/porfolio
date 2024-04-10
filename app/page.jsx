@@ -11,10 +11,6 @@ function Home() {
     const timer = setTimeout(() => {
       setDisplay(false);
     }, 1000);
-
-    return () => {
-      clearTimeout(timer);
-    };
   }, []);
 
   return (

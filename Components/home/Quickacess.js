@@ -16,7 +16,13 @@ import { FaFolder, FaBook } from "react-icons/fa";
 import { useGlobalHooks } from "@/Components/context";
 import Link from "next/link";
 const Quickaccess = () => {
-  const { ProjectTab, handleClose, AboutTab, EduTab } = useGlobalHooks();
+  const {
+    handleClose,
+    handleOpenAbout,
+    handleOpenProject,
+    handleOpenDeveloper,
+    handleOpenEducation,
+  } = useGlobalHooks();
   return (
     <Box
       sx={{
@@ -28,26 +34,24 @@ const Quickaccess = () => {
     >
       <nav aria-label="main mailbox folders">
         <List>
-          <Link href="/projects">
-            <ListItem>
-              <ListItemButton
-                onClick={() => {
-                  ProjectTab();
-                  handleClose();
-                }}
-              >
-                <ListItemIcon>
-                  <FaFolder style={{ fontSize: "32px" }} />
-                </ListItemIcon>
-                <ListItemText primary="Projects" />
-              </ListItemButton>
-            </ListItem>
-          </Link>
+          <ListItem>
+            <ListItemButton
+              onClick={() => {
+                handleOpenProject();
+                handleClose();
+              }}
+            >
+              <ListItemIcon>
+                <FaFolder style={{ fontSize: "32px" }} />
+              </ListItemIcon>
+              <ListItemText primary="Projects" />
+            </ListItemButton>
+          </ListItem>
           <Divider />
           <ListItem>
             <ListItemButton
               onClick={() => {
-                EduTab();
+                handleOpenEducation();
                 handleClose();
               }}
             >
@@ -63,7 +67,7 @@ const Quickaccess = () => {
           <ListItem>
             <ListItemButton
               onClick={() => {
-                AboutTab();
+                handleOpenAbout();
                 handleClose();
               }}
             >

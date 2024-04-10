@@ -64,7 +64,7 @@ code {
   height: 60px;
   width: 100%;
   background: hsl(0, 0%, 20%);
-  border-top: 2px solid hsl(240, 100%, 80%);
+  border-top: 2px solid #9999ff;
 }
 .footer-cont {
   width: 100%;

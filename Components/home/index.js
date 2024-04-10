@@ -5,7 +5,7 @@ import { FaAppStore } from "react-icons/fa";
 import { IconButton } from "@mui/material";
 import { useGlobalHooks } from "@/Components/context";
 import Appbar from "./Appbar";
-import Icon from "./icon";
+import HomeScreen from "./HomeScreen";
 
 // import Folder from "./folder";
 
@@ -26,7 +26,7 @@ const Main = () => {
   const currentTime = date.toLocaleTimeString();
   return (
     <div className="homepage">
-      <Icon />
+      <HomeScreen />
 
       <Appbar />
 
