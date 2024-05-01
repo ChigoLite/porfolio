@@ -5,8 +5,9 @@ import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import Context from "@/Components/context";
 export const metadata = {
-  title: "Aka Cornelius Chigozie Porfolio",
-  description: "Porfolio of Aka Cornelius Chigozie.",
+  title: "ChigoLite",
+  description:
+    "Explore a collection of software samples work, showcasing expertise in software development.",
 };
 
 export default function RootLayout({ children }) {

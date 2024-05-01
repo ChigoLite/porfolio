@@ -3,7 +3,9 @@
 import React, { useEffect, useState } from "react";
 import FrontPage from "@/Components/frontpage/front";
 import Main from "@/Components/home";
-import { Grid } from "@mui/material";
+import { Grid, ThemeProvider } from "@mui/material";
+
+import Theme from "@/theme";
 
 function Home() {
   const [display, setDisplay] = useState(true);
@@ -15,10 +17,12 @@ function Home() {
 
   return (
     <main>
-      <div className="home">
-        <FrontPage display={display} />
-        <Main />
-      </div>
+      <ThemeProvider theme={Theme}>
+        <div className="home">
+          <FrontPage display={display} />
+          <Main />
+        </div>
+      </ThemeProvider>
     </main>
   );
 }

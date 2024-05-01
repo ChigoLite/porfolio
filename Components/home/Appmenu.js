@@ -30,16 +30,14 @@ export function AccountMenu() {
     <React.Fragment>
       <Stack spacing={2}>
         <Tooltip title="Admin">
-          <Link href="/about">
-            <IconButton
-              onClick={() => {
-                handleClose();
-                handleAdmin();
-              }}
-            >
-              <FaUserCog style={{ fontSize: "34px" }} />
-            </IconButton>
-          </Link>
+          <IconButton
+            onClick={() => {
+              handleClose();
+              handleAdmin();
+            }}
+          >
+            <FaUserCog style={{ fontSize: "34px" }} />
+          </IconButton>
         </Tooltip>
         <Divider />
         <Tooltip title="shutdown">

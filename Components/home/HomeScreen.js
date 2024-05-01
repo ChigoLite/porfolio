@@ -34,35 +34,23 @@ const HomeScreen = () => {
             <Grid item xs={6} md={4}>
               <Box sx={{ width: "100% ", marginLeft: 2, marginTop: 5 }}>
                 <Grid container spacing={6}>
-                  <Grid item xs={6} md={6}>
-                    <div
-                      className={styles.icon_avatar}
-                      onClick={handleOpenProject}
-                    >
+                  <Grid item xs={6} md={6} onClick={handleOpenProject}>
+                    <div className={styles.icon_avatar}>
                       <Image src={project} alt="projects" width={80} />
                     </div>
                   </Grid>
-                  <Grid item xs={6} md={6}>
-                    <div
-                      className={styles.icon_avatar}
-                      onClick={handleOpenDeveloper}
-                    >
+                  <Grid item xs={6} md={6} onClick={handleOpenDeveloper}>
+                    <div className={styles.icon_avatar}>
                       <Image src={man} alt="user" width={60} />
                     </div>
                   </Grid>
-                  <Grid item xs={6} md={6}>
-                    <div
-                      className={styles.icon_avatar}
-                      onClick={handleOpenEducation}
-                    >
+                  <Grid item xs={6} md={6} onClick={handleOpenEducation}>
+                    <div className={styles.icon_avatar}>
                       <Image src={educationpng} alt="education" width={80} />
                     </div>
                   </Grid>
-                  <Grid item xs={6} md={6}>
-                    <div
-                      className={styles.icon_avatar}
-                      onClick={handleOpenAbout}
-                    >
+                  <Grid item xs={6} md={6} onClick={handleOpenAbout}>
+                    <div className={styles.icon_avatar}>
                       <Image src={email} alt="contact us" width={100} />
                     </div>
                   </Grid>

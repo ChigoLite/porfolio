@@ -10,6 +10,8 @@ const Context = ({ children }) => {
   const [education, setEducation] = useState(false);
   const [projects, setProjects] = useState(false);
   const [open, setOpen] = useState(false);
+  const [toggleScreen, setToggleScreen] = React.useState(false);
+
   const handleOpenProject = () => {
     setProjects(true);
     setOpen(true);
@@ -52,6 +54,8 @@ const Context = ({ children }) => {
         handleOpenDeveloper,
         handleOpenEducation,
         projects,
+        toggleScreen,
+        setToggleScreen,
       }}
     >
       {children}

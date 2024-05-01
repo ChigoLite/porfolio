@@ -10,24 +10,11 @@ import {
 } from "@mui/material";
 import { ProjectsInfo } from "./projectInfo";
 import Image from "next/image";
+import Title from "../utils/Title";
 const Projects = () => {
   return (
     <>
-      <Box
-        sx={{
-          background: "#9999ff",
-          width: 100,
-          height: 40,
-          position: "absolute",
-          left: 0,
-          top: 1,
-          color: "white",
-        }}
-      >
-        <Typography variant="h4 " component="h2" sx={{}}>
-          Projects
-        </Typography>
-      </Box>
+      <Title title="projects" />
       <Container>
         <Box mt={2}>
           <Box m={3} sx={{ textAlign: "center" }}>
