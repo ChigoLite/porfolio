@@ -1,22 +1,35 @@
-import Lms from "../home/assets/Lms.jpg";
-
 export const ProjectsInfo = [
   {
     name: "learnX",
+    rank: 20,
     category: "learning management site",
-    img: { Lms },
     link: "https://learner-x.vercel.app/",
+    language: ["react", "express", "cloudinary", "mongoDb", "mui"],
   },
   {
-    name: "B's Vendor",
-    category: "E-Commerce site",
-    img: { Lms },
+    name: "Best Vendor",
+    category: "commercial outfit selling site.",
     link: "https://e-commerce-brown-eta.vercel.app/",
+    language: ["react", "express", "cloudinary", "mongoDb", "stripe", "mui"],
   },
   {
     name: "Kenneth Art",
-    category: "Art selling site",
-    img: { Lms },
+    category: "Art-work selling site",
     link: "https://ken-s-art.vercel.app/",
+    language: ["react", "mui"],
+  },
+  {
+    name: "Chat-up",
+    rank: 20,
+    category: "A chat system.",
+    link: "https://ken-s-art.vercel.app/",
+    language: [
+      "react",
+      "express",
+      "cloudinary",
+      "mongoDb",
+      "socket-io",
+      "taiwindCss",
+    ],
   },
 ];

@@ -23,27 +23,8 @@ body {
   font-family: sans_BoldItalic;
   src: url("../Components/assets/PTSans-BoldItalic.ttf");
 }
-.title {
-  color: white;
-  font-size: large;
-  font-weight: 500;
-  font-family: "sans_BoldItalic";
-  margin: auto 0;
-}
-.titleHeader {
-  background-color: #9999ff;
-  height: 50px;
-  margin: 0;
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-}
 
-.home {
+/* .home {
   background: url("../public/background.jpg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -54,209 +35,60 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-}
+} */
 
-/* frontPage styte */
-.App {
+.info {
+  width: 100%;
+  margin-top: 50px;
   text-align: center;
+  position: fixed;
+  z-index: 1;
+  height: 160px;
+  background-color: #9999ff;
+  text-transform: capitalize;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.info_name {
+  padding-top: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: sans_regular;
 }
-.fade {
-  transform: translateY(-100%);
-  transition: 2s ease-out;
-}
-.fade2 {
-  display: none;
-}
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.info_name > span {
+  font-family: sans_bold;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-.footernav {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 60px;
-  width: 100%;
-  background: hsl(0, 0%, 20%);
-  border-top: 2px solid #9999ff;
-}
-.footer-cont {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-}
-
-.timeIcon p {
-  line-height: 3px;
+.info_text1 {
+  font-size: 16px;
   font-weight: 500;
-  color: rgb(255, 254, 254);
-  width: 200px;
+  font-family: sans_BoldItalic;
 }
-.appbar {
-  width: 100%;
-  height: 100vh;
+.info_text2 {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: sans_BoldItalic;
 }
-.app {
-  background: hsl(0, 0%, 60%);
-  width: 400px;
-  height: 550px;
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  margin-bottom: 20px;
-}
-
-.fadeOutApp {
-  transition: 1s ease-out;
-  transform: translateX(-100vw);
-  visibility: hidden;
-}
-.fadeInApp {
-  transform: translateX(0vw);
-  transition: 1s ease-in;
-}
-.applogo {
-  position: absolute;
-  bottom: 36px;
-  left: 6px;
-}
-.brightness {
-  position: absolute;
-  bottom: 36px;
-  left: 100px;
-  width: 50%;
-}
-.closenav {
-  position: absolute;
-  right: 0;
-  top: 0;
-  margin: 0;
-  padding: 0;
-}
-.quickAccess {
-  margin: 16px;
-  font-weight: 700;
-}
-.closenav :hover {
-  background-color: hsl(0, 100%, 30%);
-}
-.adminOverlay {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.048);
-  position: fixed;
-  left: 0;
-}
-.hide {
-  display: none;
-}
-.adminCont {
-  margin: auto;
-  border-radius: 17px;
-  background: linear-gradient(145deg, #979393, #b4aeae);
-  box-shadow: 9px 9px 18px #7c7979, -9px -9px 18px #d4cdcd;
-  height: 550px;
-  width: 85%;
+.landingpage {
   position: relative;
-}
-@media screen and (max-width: 750px) {
-  .app {
-    background: hsl(0, 0%, 60%);
-    width: 350px;
-    height: 550px;
-    left: 0;
-    bottom: 0;
-    position: absolute;
-    margin-bottom: 20px;
-  }
-}
-.folderCont {
-  width: 80%;
-  height: 100%;
-  margin: auto;
-}
-.folders {
-  display: flex;
-  flex-flow: wrap;
-  gap: 50px;
-  margin: 12px;
-  margin-top: 120px;
-}
-.folders div {
-  width: 100px;
-  height: 90px;
-  border-radius: 6px;
-  background-color: #fdfafaa1;
-  overflow: hidden;
-}
-.foldertxt {
-  background: rgba(36, 36, 216, 0.411);
-  color: rgb(201, 195, 195);
-  font-size: 12px;
-  text-transform: capitalize;
-  padding: 6px;
-}
-.foldertxt span {
-  text-transform: uppercase;
-  font-size: 32px;
-  color: rgb(179, 96, 179);
-  font-weight: 600;
-}
-@media screen and (max-width: 600px) {
-  .icon_banner {
-    margin-right: 50px;
-    margin-top: 40px;
-    margin-left: 20px;
-  }
-  .small_screen_icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
-.icon_container {
-  height: 450px;
+  z-index: 2;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
-  margin-top: 20px;
-}
-.icon_container h1 {
-  text-align: center;
-  color: rgb(255, 255, 255);
+  margin-top: 210px;
+  /* background: url("../public/background.jpg"); */
+  background: #cccce4;
+
+  height: 100%;
 }
 
-.icon_banner {
-  margin-right: 50px;
-  margin-top: 40px;
-  margin-left: 50px;
-}
-.icon_avater {
+.workEx {
   text-align: center;
-  width: 120px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
+  font-weight: 800;
+  font-family: sans_bold;
+  font-size: 24px;
+  color: #9999ff;
+  margin-top: 8px;
+  text-transform: uppercase;
 }
-.link {
-  font-size: 36px;
-  color: #68440f;
-  margin-left: 16px;
+.projectLink {
+  text-decoration: none;
+  padding: 8px;
+  text-transform: capitalize;
 }
