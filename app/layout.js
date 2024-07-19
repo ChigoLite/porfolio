@@ -4,6 +4,7 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import Context from "@/Components/context";
+import Footer from "../Components/home/footer";
 export const metadata = {
   title: "ChigoLite",
   description:
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Context>{children}</Context>
+        <Footer />
       </body>
     </html>
   );
