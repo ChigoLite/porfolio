@@ -11,9 +11,10 @@ import {
   Box,
   Stack,
   Chip,
+  Fab,
 } from "@mui/material";
 import developer from "../assets/developer.jpg";
-import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaLiraSign } from "react-icons/fa";
 import Image from "next/image";
 import { WorkEx } from "./workEx";
 import { ProjectsInfo } from "./projectInfo";
@@ -43,8 +44,10 @@ const Landingpage = () => {
                     src={developer}
                     width={400}
                     objectFit="cover"
-                    objectPosition="center"
-                    height={300}
+                    objectPosition="contain"
+                    alt="cornelius"
+                    height={200}
+                    layout="responsive"
                   />
                 </CardMedia>
                 <CardContent>
@@ -83,7 +86,6 @@ const Landingpage = () => {
               >
                 <Paper sx={{ width: 440 }}>
                   <Typography
-                    gutterBottom
                     variant="h5"
                     sx={{
                       textTransform: "Capitalize",
@@ -94,7 +96,13 @@ const Landingpage = () => {
                   >
                     developer overview
                   </Typography>
-                  <Typography sx={{ padding: 8, fontFamily: "sans_regular" }}>
+                  <Typography
+                    sx={{
+                      fontFamily: "sans_regular",
+                      padding: 5,
+                      lineHeight: 2,
+                    }}
+                  >
                     Hello! I'm{" "}
                     <span
                       style={{
@@ -127,23 +135,36 @@ const Landingpage = () => {
             <h3>Highlighted Projects</h3>
             {result.map((project) => {
               return (
-                <Paper key={project.name}>
+                <Paper sx={{ marginTop: 3 }} key={project.name}>
                   <a className="projectLink" href="#">
                     {project.name}
                   </a>
-                  <p>{project.category}</p>
-                  <Box>
+                  <p style={{ paddingLeft: 4 }}>{project.category}</p>
+                  <Stack direction="row" spacing={2}>
                     {project.language.map((lang) => {
-                      return (
-                        <Stack>
-                          <Chip label={lang} />
-                        </Stack>
-                      );
+                      return <Chip key={lang} label={lang} />;
                     })}
-                  </Box>
+                  </Stack>
                 </Paper>
               );
             })}
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItem: "center",
+                textTransform: "capitalize",
+                marginTop: "12px",
+              }}
+            >
+              <Fab variant="extended" color="primary">
+                <Typography
+                  sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
+                >
+                  view all projects.
+                </Typography>
+              </Fab>
+            </Box>
           </Box>
         </Container>
       </div>

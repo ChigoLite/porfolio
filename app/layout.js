@@ -4,7 +4,11 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 import Context from "@/Components/context";
+import { ThemeProvider } from "@mui/material";
+import Theme from "@/theme";
 import Footer from "../Components/home/footer";
+import Navbar from "../Components/home/navbar";
+
 export const metadata = {
   title: "ChigoLite",
   description:
@@ -15,8 +19,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <Context>{children}</Context>
-        <Footer />
+        <ThemeProvider theme={Theme}>
+          <div className="home">
+            <Navbar />
+            <Context>{children}</Context>
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
