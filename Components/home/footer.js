@@ -19,23 +19,25 @@ const Footer = () => {
             <Box>
               <Typography
                 className="contactName"
-                gutterButtom
                 sx={{
                   color: "black",
                   fontFamily: "sans_bold",
+                  paddingTop: "12px",
                 }}
               >
                 Contact
               </Typography>
               <div className="contacts">
                 <div>
-                  <a href="#">GitHub</a>
+                  <a href="https://github.com/ChigoLite">GitHub</a>
                 </div>
                 <div>
                   <a href={`mailto:chrystnelson@gmail.com`}>Email</a>
                 </div>
                 <div>
-                  <a href="#">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/aka-cornelius-489835252">
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             </Box>
@@ -48,7 +50,7 @@ const Footer = () => {
                   sx={{
                     color: "black",
                     fontFamily: "sans_bold",
-                    marginTop: "12px",
+                    paddingTop: "12px",
                   }}
                 >
                   General
@@ -68,25 +70,24 @@ const Footer = () => {
                   sx={{
                     color: "black",
                     fontFamily: "sans_bold",
-                    marginTop: "12px",
+                    paddingTop: "12px",
                   }}
                 >
                   Projects
                 </Typography>
                 <Typography component="div">
-                  <a href="#">Chat-up</a>
+                  <a href="https://chat-up-beta.vercel.app/">Chat-up</a>
                 </Typography>
                 <Typography component="div">
-                  <a href="#">Learner-x</a>
+                  <a href="https://learner-x.vercel.app/">Learner-x</a>
                 </Typography>
                 <Typography component="div">
-                  <a href="#">Best Vendor</a>
+                  <a href="https://e-commerce-brown-eta.vercel.app/">
+                    Best Vendor
+                  </a>
                 </Typography>
                 <Typography component="div">
-                  <a href="#">Ken;s Art</a>
-                </Typography>
-                <Typography component="div">
-                  <a href="#">Viral Blog</a>
+                  <a href="https://ken-s-art.vercel.app/">Ken's Art</a>
                 </Typography>
               </Box>
             </Box>
@@ -99,7 +100,8 @@ const Footer = () => {
               sx={{
                 textAlign: "center",
                 textTransform: "capitalize",
-                fontFamily: "sans_BoltItalic",
+                fontFamily: "sans_italic",
+                fontSize: "12px",
               }}
             >
               made with <span style={{ color: "red" }}> ❤ </span> by cornelius

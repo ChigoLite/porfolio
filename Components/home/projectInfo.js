@@ -22,7 +22,7 @@ export const ProjectsInfo = [
     name: "Chat-up",
     rank: 20,
     category: "A chat system.",
-    link: "https://ken-s-art.vercel.app/",
+    link: "https://chat-up-beta.vercel.app/",
     language: [
       "react",
       "express",

@@ -18,6 +18,7 @@ import { FaGithub, FaLinkedin, FaLiraSign } from "react-icons/fa";
 import Image from "next/image";
 import { WorkEx } from "./workEx";
 import { ProjectsInfo } from "./projectInfo";
+import Link from "next/link";
 const Landingpage = () => {
   let result = ProjectsInfo.reduce((acc, user) => {
     if (user.rank >= 20) {
@@ -40,15 +41,17 @@ const Landingpage = () => {
                 }}
               >
                 <CardMedia sx={{ width: 400 }} title="Aka Cornelius">
-                  <Image
-                    src={developer}
-                    width={400}
-                    objectFit="cover"
-                    objectPosition="contain"
-                    alt="cornelius"
-                    height={200}
-                    layout="responsive"
-                  />
+                  <Box sx={{ width: 400, height: 360, overflow: "hidden" }}>
+                    <Image
+                      src={developer}
+                      width={400}
+                      objectFit="cover"
+                      objectPosition="contain"
+                      alt="cornelius"
+                      height={320}
+                      layout="responsive"
+                    />
+                  </Box>
                 </CardMedia>
                 <CardContent>
                   <Typography
@@ -68,10 +71,14 @@ const Landingpage = () => {
                 </CardContent>
                 <CardActions>
                   <Button size="large">
-                    <FaGithub style={{ fontSize: "40px" }} />
+                    <a href="https://github.com/ChigoLite">
+                      <FaGithub style={{ fontSize: "40px", color: "black" }} />
+                    </a>
                   </Button>
                   <Button size="large">
-                    <FaLinkedin style={{ fontSize: "40px" }} />
+                    <a href="https://www.linkedin.com/in/aka-cornelius-489835252">
+                      <FaLinkedin style={{ fontSize: "40px", color: "blue" }} />
+                    </a>
                   </Button>
                 </CardActions>
               </Card>
@@ -130,21 +137,44 @@ const Landingpage = () => {
           <h3 className="workEx">my work experience</h3>
           <Paper>
             <WorkEx />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItem: "center",
+                textTransform: "capitalize",
+                marginTop: "12px",
+              }}
+            >
+              <Fab variant="extended" color="primary">
+                <Link href="/experience">
+                  <Typography
+                    sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
+                  >
+                    View in Details.
+                  </Typography>
+                </Link>
+              </Fab>
+            </Box>
           </Paper>
           <Box>
             <h3>Highlighted Projects</h3>
             {result.map((project) => {
               return (
-                <Paper sx={{ marginTop: 3 }} key={project.name}>
-                  <a className="projectLink" href="#">
+                <Paper sx={{ paddingLeft: 3, marginTop: 3 }} key={project.name}>
+                  <a className="projectLink" href={project.link}>
                     {project.name}
                   </a>
                   <p style={{ paddingLeft: 4 }}>{project.category}</p>
-                  <Stack direction="row" spacing={2}>
+                  <Grid container rowSpacing={1} columnGap={2}>
                     {project.language.map((lang) => {
-                      return <Chip key={lang} label={lang} />;
+                      return (
+                        <Grid key={lang} xs={4} sm={4} md={3}>
+                          <Chip key={lang} label={lang} />
+                        </Grid>
+                      );
                     })}
-                  </Stack>
+                  </Grid>
                 </Paper>
               );
             })}
@@ -158,11 +188,13 @@ const Landingpage = () => {
               }}
             >
               <Fab variant="extended" color="primary">
-                <Typography
-                  sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
-                >
-                  view all projects.
-                </Typography>
+                <Link href="/projects">
+                  <Typography
+                    sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
+                  >
+                    view all projects.
+                  </Typography>
+                </Link>
               </Fab>
             </Box>
           </Box>

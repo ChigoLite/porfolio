@@ -11,8 +11,7 @@ import Navbar from "../Components/home/navbar";
 
 export const metadata = {
   title: "ChigoLite",
-  description:
-    "Explore a collection of software samples work, showcasing expertise in software development.",
+  description: "software enginner portfolio.",
 };
 
 export default function RootLayout({ children }) {

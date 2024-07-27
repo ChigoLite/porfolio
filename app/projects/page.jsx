@@ -1,4 +1,4 @@
-import { Container, Box, Stack, Chip, Paper } from "@mui/material";
+import { Container, Box, Stack, Chip, Paper, Grid } from "@mui/material";
 import { ProjectsInfo } from "@/Components/home/projectInfo";
 
 const Projects = () => {
@@ -21,15 +21,40 @@ const Projects = () => {
                 <a className="projectLink" href="#">
                   {project.name}
                 </a>
-                <p style={{ paddingLeft: 4 }}>{project.category}</p>
-                <Stack direction="row" spacing={2}>
+                <p style={{ paddingLeft: 4, marginTop: 3 }}>
+                  {project.category}
+                </p>
+                <Grid container rowSpacing={1} columnGap={2}>
                   {project.language.map((lang) => {
-                    return <Chip key={lang} label={lang} />;
+                    return (
+                      <Grid key={lang} xs={4} sm={4} md={3}>
+                        <Chip key={lang} label={lang} />
+                      </Grid>
+                    );
                   })}
-                </Stack>
+                </Grid>
               </Paper>
             );
           })}
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItem: "center",
+              textTransform: "capitalize",
+              marginTop: "12px",
+            }}
+          >
+            <Fab variant="extended" color="primary">
+              <a href="https://github.com/ChigoLite/">
+                <Typography
+                  sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
+                >
+                  Check Github
+                </Typography>
+              </a>
+            </Fab>
+          </Box>
         </Container>
       </Box>
     </>

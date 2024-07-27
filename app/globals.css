@@ -85,6 +85,10 @@ body {
   padding: 8px;
   text-transform: capitalize;
   font-size: larger;
+  text-decoration: underline;
+}
+a {
+  text-decoration: none;
 }
 @media (max-width: 768px) {
   .contacts {
@@ -111,6 +115,7 @@ body {
 .contacts a {
   text-decoration: none;
   color: white;
+  padding: 8px;
 }
 .logo {
   /* background: #333; */
@@ -123,4 +128,12 @@ body {
 .general a {
   text-decoration: none;
   font-size: 16px;
+  color: white;
+  padding: 8px;
+}
+.projects a {
+  text-decoration: none;
+  font-size: 16px;
+  color: white;
+  padding: 8px;
 }
