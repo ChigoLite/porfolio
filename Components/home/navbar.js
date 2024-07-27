@@ -25,7 +25,7 @@ const Navbar = () => {
             <Box>
               {navItems.map((item) => (
                 <Button key={item} sx={{ color: "#fff" }}>
-                  {item}
+                  <Link href="/projects">{item}</Link>
                 </Button>
               ))}
             </Box>
