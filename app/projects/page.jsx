@@ -27,7 +27,7 @@ const Projects = () => {
           {ProjectsInfo.map((project) => {
             return (
               <Paper sx={{ marginTop: 3 }} key={project.name}>
-                <a className="projectLink" href="#">
+                <a className="projectLink" href={project.link}>
                   {project.name}
                 </a>
                 <p style={{ paddingLeft: 4, marginTop: 3 }}>
