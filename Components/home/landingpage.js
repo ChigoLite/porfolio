@@ -12,8 +12,9 @@ import {
   Stack,
   Chip,
   Fab,
+  Divider,
 } from "@mui/material";
-import developer from "../assets/developer.jpg";
+import Portfolio from "../assets/Portfolio.jpg";
 import { FaGithub, FaLinkedin, FaLiraSign } from "react-icons/fa";
 import Image from "next/image";
 import { WorkEx } from "./workEx";
@@ -29,153 +30,151 @@ const Landingpage = () => {
   return (
     <>
       <div className="landingpage">
-        <Container>
-          <Grid container spacing={2}>
-            <Grid item xs={12} md={6}>
-              <Card
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  flexFlow: "column",
-                }}
-              >
-                <CardMedia sx={{ width: 400 }} title="Aka Cornelius">
-                  <Box sx={{ width: 400, height: 360, overflow: "hidden" }}>
-                    <Image
-                      src={developer}
-                      width={400}
-                      objectFit="cover"
-                      objectPosition="contain"
-                      alt="cornelius"
-                      height={320}
-                      layout="responsive"
-                    />
-                  </Box>
-                </CardMedia>
-                <CardContent>
-                  <Typography
-                    sx={{ fontFamily: "sans_bold" }}
-                    variant="h5"
-                    component="div"
-                  >
-                    Aka Cornelius
-                  </Typography>
-                  <Typography
-                    sx={{ fontFamily: "sans_regular" }}
-                    variant="body2"
-                    color="text.secondary"
-                  >
-                    chrystnelson@gmail.com
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="large">
-                    <a href="https://github.com/ChigoLite">
-                      <FaGithub style={{ fontSize: "40px", color: "black" }} />
-                    </a>
-                  </Button>
-                  <Button size="large">
-                    <a href="https://www.linkedin.com/in/aka-cornelius-489835252">
-                      <FaLinkedin style={{ fontSize: "40px", color: "blue" }} />
-                    </a>
-                  </Button>
-                </CardActions>
-              </Card>
-            </Grid>
-            <Grid item xs={12} md={6}>
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <Paper sx={{ width: 440 }}>
-                  <Typography
-                    variant="h5"
-                    sx={{
-                      textTransform: "Capitalize",
-                      textAlign: "center",
-                      fontFamily: "sans_bold",
-                      fontWeight: 600,
-                    }}
-                  >
-                    developer overview
-                  </Typography>
-                  <Typography
-                    sx={{
-                      fontFamily: "sans_regular",
-                      padding: 5,
-                      lineHeight: 2,
-                    }}
-                  >
-                    Hello! I'm{" "}
-                    <span
-                      style={{
-                        color: "#9999ff",
-                        fontFamily: "sans_BoldItalic",
-                      }}
-                    >
-                      {" "}
-                      Cornelius{" "}
-                    </span>
-                    , a passionate Fullstack Developer proficient in the MERN
-                    stack. Currently, I'm pursuing my studies at Enugu State
-                    University. Over the past few years, I've been consulted by
-                    and collaborated with various tech companies, successfully
-                    delivering a range of projects. My expertise extends to
-                    small-scale DevOps tasks, ensuring seamless integration and
-                    deployment. I'm committed to leveraging technology to create
-                    impactful and efficient solutions
-                  </Typography>
-                </Paper>
-              </Box>
-            </Grid>
-          </Grid>
+        {/* <Container> */}
+        <Card>
+          <div className="introCont">
+            <Paper>
+              <CardMedia sx={{ width: 400 }} title="Aka Cornelius">
+                <Box
+                  sx={{
+                    width: 400,
+                    height: 360,
+                    overflow: "hidden",
+                    textAlign: "center",
+                  }}
+                >
+                  <Image
+                    src={Portfolio}
+                    width={400}
+                    objectFit="cover"
+                    objectPosition="contain"
+                    alt="cornelius"
+                    height={320}
+                    layout="responsive"
+                  />
+                </Box>
+              </CardMedia>
+              <CardContent>
+                <Typography
+                  sx={{ fontFamily: "sans_bold" }}
+                  variant="h5"
+                  component="div"
+                >
+                  Aka Cornelius
+                </Typography>
+                <Typography
+                  sx={{ fontFamily: "sans_regular" }}
+                  variant="body2"
+                  color="text.secondary"
+                >
+                  chrystnelson@gmail.com
+                </Typography>
+              </CardContent>
+              <CardActions>
+                <Button size="large">
+                  <a href="https://github.com/ChigoLite">
+                    <FaGithub style={{ fontSize: "40px", color: "black" }} />
+                  </a>
+                </Button>
+                <Button size="large">
+                  <a href="https://www.linkedin.com/in/aka-cornelius-489835252">
+                    <FaLinkedin style={{ fontSize: "40px", color: "blue" }} />
+                  </a>
+                </Button>
+              </CardActions>
+            </Paper>
 
-          <h3 className="workEx">my work experience</h3>
-          <Paper>
-            <WorkEx />
-            <Box
+            <Paper
               sx={{
                 display: "flex",
-                justifyContent: "center",
                 alignItem: "center",
-                textTransform: "capitalize",
-                marginTop: "12px",
+                alignSelf: "center",
+                justifyContent: "center",
               }}
             >
-              <Fab variant="extended" color="primary">
-                <Link href="/experience">
-                  <Typography
-                    sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
-                  >
-                    View in Details.
-                  </Typography>
-                </Link>
-              </Fab>
-            </Box>
-          </Paper>
-          <Box>
+              <Typography
+                sx={{
+                  fontFamily: "sans_regular",
+                  padding: 5,
+                  lineHeight: "32px",
+                }}
+              >
+                Hello! I'm{" "}
+                <span
+                  style={{
+                    color: "#9999ff",
+                    fontFamily: "sans_BoldItalic",
+                    fontSize: "1.5rem",
+                  }}
+                >
+                  {" "}
+                  Cornelius{" "}
+                </span>
+                , a passionate Fullstack Developer proficient in the MERN stack.
+                Currently, I'm pursuing my studies at Enugu State University.
+                Over the past few years, I've been consulted by and collaborated
+                with various tech companies, successfully delivering a range of
+                projects. My expertise extends to small-scale DevOps tasks,
+                ensuring seamless integration and deployment. I'm committed to
+                leveraging technology to create impactful and efficient
+                solutions
+              </Typography>
+            </Paper>
+          </div>
+        </Card>
+
+        <Paper>
+          <h3 className="workEx">my work experience</h3>
+          <WorkEx />
+          <Box
+            sx={{
+              display: "flex",
+              justifyContent: "center",
+              alignItem: "center",
+              textTransform: "capitalize",
+              marginTop: "12px",
+            }}
+          >
+            <Button variant="contained" size="large" color="tertiary">
+              <Link href="/experience">
+                <Typography
+                  sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
+                >
+                  View in Details.
+                </Typography>
+              </Link>
+            </Button>
+          </Box>
+        </Paper>
+        <Box>
+          <Paper sx={{ paddingLeft: 3, marginTop: 3 }}>
             <h3>Highlighted Projects</h3>
             {result.map((project) => {
               return (
-                <Paper sx={{ paddingLeft: 3, marginTop: 3 }} key={project.name}>
+                <Box key={project.name}>
+                  <hr />
                   <a className="projectLink" href={project.link}>
                     {project.name}
                   </a>
                   <p style={{ paddingLeft: 4 }}>{project.category}</p>
-                  <Grid container rowSpacing={1} columnGap={2}>
+                  <div className="langs">
                     {project.language.map((lang) => {
                       return (
-                        <Grid key={lang} xs={4} sm={4} md={3}>
-                          <Chip key={lang} label={lang} />
-                        </Grid>
+                        <div key={lang}>
+                          <hr />
+                          <Divider>
+                            <Button
+                              sx={{ display: "block" }}
+                              variant="outlined"
+                            >
+                              {lang}
+                            </Button>
+                          </Divider>
+                        </div>
                       );
                     })}
-                  </Grid>
-                </Paper>
+                  </div>
+                </Box>
               );
             })}
             <Box
@@ -187,7 +186,7 @@ const Landingpage = () => {
                 marginTop: "12px",
               }}
             >
-              <Fab variant="extended" color="primary">
+              <Button variant="contained" color="tertiary">
                 <Link href="/projects">
                   <Typography
                     sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
@@ -195,10 +194,11 @@ const Landingpage = () => {
                     view all projects.
                   </Typography>
                 </Link>
-              </Fab>
+              </Button>
             </Box>
-          </Box>
-        </Container>
+          </Paper>
+        </Box>
+        {/* </Container> */}
       </div>
     </>
   );

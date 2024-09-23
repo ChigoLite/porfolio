@@ -7,6 +7,8 @@ import {
   Grid,
   Fab,
   Typography,
+  Divider,
+  Button,
 } from "@mui/material";
 import { ProjectsInfo } from "@/Components/home/projectInfo";
 
@@ -23,26 +25,33 @@ const Projects = () => {
         </div>
       </div>
       <Box className="landingpage">
-        <Container>
+        <Paper sx={{ marginTop: 3 }}>
           {ProjectsInfo.map((project) => {
             return (
-              <Paper sx={{ marginTop: 3 }} key={project.name}>
+              <Box key={project.name}>
+                <hr />
+
                 <a className="projectLink" href={project.link}>
                   {project.name}
                 </a>
                 <p style={{ paddingLeft: 4, marginTop: 3 }}>
                   {project.category}
                 </p>
-                <Grid container rowSpacing={1} columnGap={2}>
+                <div className="langs">
                   {project.language.map((lang) => {
                     return (
-                      <Grid key={lang} xs={4} sm={4} md={3}>
-                        <Chip key={lang} label={lang} />
-                      </Grid>
+                      <div key={lang}>
+                        <hr />
+                        <Divider>
+                          <Button sx={{ display: "block" }} variant="outlined">
+                            {lang}
+                          </Button>
+                        </Divider>
+                      </div>
                     );
                   })}
-                </Grid>
-              </Paper>
+                </div>
+              </Box>
             );
           })}
           <Box
@@ -54,7 +63,7 @@ const Projects = () => {
               marginTop: "12px",
             }}
           >
-            <Fab variant="extended" color="primary">
+            <Button variant="contained" color="tertiary">
               <a href="https://github.com/ChigoLite/">
                 <Typography
                   sx={{ fontFamily: "sans_BoldItalic", color: "white" }}
@@ -62,9 +71,9 @@ const Projects = () => {
                   Check Github
                 </Typography>
               </a>
-            </Fab>
+            </Button>
           </Box>
-        </Container>
+        </Paper>
       </Box>
     </>
   );
