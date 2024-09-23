@@ -77,12 +77,13 @@ body {
   font-size: 16px;
   font-weight: 500;
   font-family: sans_BoldItalic;
+  margin-top: 10px;
 }
 .landingpage {
   position: relative;
   z-index: 2;
   width: 100%;
-  margin-top: 210px;
+  margin-top: 215px;
   /* background: url("../public/background.jpg"); */
   background: #cbcbf3;
 
