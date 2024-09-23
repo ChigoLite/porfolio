@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div>
-      <Box sx={{ width: "100%", marginTop: "12px", background: "#9999ff" }}>
+      <Box sx={{ width: "100%", marginTop: "12px", background: "#1c1c47" }}>
         <Container>
           <Box
             className="contactBox"
@@ -23,6 +23,7 @@ const Footer = () => {
                   color: "black",
                   fontFamily: "sans_bold",
                   paddingTop: "12px",
+                  fontSize: "1.5rem",
                 }}
               >
                 Contact
@@ -51,6 +52,7 @@ const Footer = () => {
                     color: "black",
                     fontFamily: "sans_bold",
                     paddingTop: "12px",
+                    fontSize: "1.5rem",
                   }}
                 >
                   General
@@ -71,6 +73,7 @@ const Footer = () => {
                     color: "black",
                     fontFamily: "sans_bold",
                     paddingTop: "12px",
+                    fontSize: "1.5rem",
                   }}
                 >
                   Projects
@@ -102,6 +105,7 @@ const Footer = () => {
                 textTransform: "capitalize",
                 fontFamily: "sans_italic",
                 fontSize: "12px",
+                color: "white",
               }}
             >
               made with <span style={{ color: "red" }}> ❤ </span> by cornelius
